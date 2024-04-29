@@ -1,6 +1,5 @@
-import logging
 import  sys
-import logger
+from src.logger import logging
 def error_message_detail(error, error_detail:sys):
     _, _, exc_tb = error_detail.exc_info()
     error_message = (f'error occured in python script name [{exc_tb.tb_frame.f_code.co_filename}] '
@@ -22,10 +21,3 @@ class CustomError(Exception):
         pass
     pass
 
-
-if __name__ == '__main__':
-    try:
-        print(1/0)
-    except Exception as e:
-        logging.info('Division by Zero Error')
-        raise CustomError(e, sys)
