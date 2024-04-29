@@ -39,7 +39,7 @@ class DataInjestion:
             raise CustomError(e, sys)
         pass
 
-
-obj = DataInjestion()
-x = obj.injestion()
-print(x)
+if __name__ == '__main__':
+    obj = DataInjestion()
+    x = obj.injestion()
+    print(x)
